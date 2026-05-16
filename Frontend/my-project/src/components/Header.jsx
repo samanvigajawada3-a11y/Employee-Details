@@ -1,4 +1,4 @@
-import {NavLink} from "react-router"
+import {NavLink} from "react-router-dom"
 function Header() {
   return (
     <nav className="flex justify-end gap-4 bg-gray-500 p-5 text-2xl">
