@@ -27,28 +27,30 @@ function ListOfEmps() {
         getEmps()
       }
     }catch(err){
-      // deal with error
-      // console.log(err.message)
-      setError(err)
+      setError(err.response?.data?.reason || err.message || "Failed to delete employee")
     }finally{
       setLoading(false)
     }
   }
 
   if(loading){
-    <p className="text-red-600 text-center mt-40 text-5xl">Loading...</p>
+    return <p className="text-red-600 text-center mt-40 text-5xl">Loading...</p>
   }
   if(error){
-    <p className="text-red-600 text-center mt-40 text-3xl">{error}</p>
+    return <p className="text-red-600 text-center mt-40 text-3xl">{error}</p>
   }
 
   async function getEmps() {
+    try {
       let res = await axios.get("https://employee-details-a3il.onrender.com/employee-api/employees");
       if (res.status === 200) {
         let resObj = await res.data;
         setEmps(resObj.payload);
       }
+    } catch(err) {
+      setError(err.response?.data?.reason || err.message || "Failed to fetch employees")
     }
+  }
 
   useEffect(() => {
     getEmps();
