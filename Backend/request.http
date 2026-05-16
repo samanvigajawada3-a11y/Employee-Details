@@ -1,5 +1,5 @@
 ### POST Request
-POST http://localhost:3000/employee-api/employees
+POST https://employee-details-a3il.onrender.com/employee-api/employees
 Content-Type: application/json
 
 {
@@ -12,11 +12,11 @@ Content-Type: application/json
 
 ### GET Request
 
-GET http://localhost:3000/employee-api/employees
+GET https://employee-details-a3il.onrender.com/employee-api/employees
 
 ### PUT Request
 
-PUT http://localhost:3000/employee-api/employees/69ca297a0b1deb9266096be8
+PUT https://employee-details-a3il.onrender.com/employee-api/employees/69ca297a0b1deb9266096be8
 Content-Type: application/json
 
 {
@@ -29,6 +29,6 @@ Content-Type: application/json
 
 ### DELETE Request
 
-DELETE http://localhost:3000/employee-api/employees/69ca297a0b1deb9266096be8
+DELETE https://employee-details-a3il.onrender.com/employee-api/employees/69ca297a0b1deb9266096be8
 
 

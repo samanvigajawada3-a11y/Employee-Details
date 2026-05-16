@@ -13,7 +13,7 @@ function CreateEmp() {
     try{
       // make HTTP POST request
       setLoading(true)
-      let res = await fetch("http://localhost:3000/employee-api/employees",{
+      let res = await fetch("https://employee-details-a3il.onrender.com/employee-api/employees",{
         method:"POST",
         headers: {"Content-Type" : "application/json"},
         body : JSON.stringify(newEmpObj)
