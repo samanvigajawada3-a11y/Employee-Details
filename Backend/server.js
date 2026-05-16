@@ -22,7 +22,7 @@ const port = 3000
 // connect to DB
 async function connectDB(){
     try{
-        await connect("mongodb://localhost:27017/myDB")
+        await connect(DB_URL)
         console.log("DB connection success")
         // conection
         app.listen(port,()=>console.log(`Server is listening to the port ${port}.....`))
